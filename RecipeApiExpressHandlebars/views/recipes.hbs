@@ -1,0 +1,9 @@
+<h2>Recipes</h2>
+<a href="/recipes/new">Create</a>
+{{#each recipes}}
+ <p><strong>{{Title}}</strong></p>
+ <p> {{Summary}} (Minutes: {{Minutes}})</p>
+ <a href="/recipes/delete/{{_id}}">Delete</a>
+ <a href="/recipes/edit/{{_id}}">Edit</a>
+ <hr>
+{{/each}}
