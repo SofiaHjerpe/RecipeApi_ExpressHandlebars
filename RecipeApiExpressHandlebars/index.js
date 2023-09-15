@@ -26,7 +26,6 @@ app.get('/recipes', async (req, res) => {
 
     const dbRecipes = db.collection("Recipes").find()
     const recipes = await dbRecipes.toArray()
-
     res.render('recipes', { recipes })
 })
 
@@ -66,6 +65,7 @@ app.post('/recipes/delete/:id', async (req, res) => {
 })
 
 app.get('/recipes/edit/:id', async (req, res) => {
+    
     res.render('edit', { id: req.params.id })
 })
 
